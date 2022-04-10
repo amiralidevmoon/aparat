@@ -47,10 +47,10 @@
                         <a href="#"><img src="/demo_img/ch-1.jpg" alt=""></a>
                     </div>
                     <div class="chanel-info">
-                        <a class="title" href="#">داود طاهری</a>
+                        <a class="title" href="#">{{ $video->owner_name }}</a>
                         <span class="subscribers">436,414 ویدیو</span>
                     </div>
-                    <a href="#" class="subscribe">مشاهده همه ویدیوهای داوود طاهری</a>
+                    <a href="#" class="subscribe">مشاهده همه ویدیوهای {{ $video->owner_name }}</a>
                 </div>
                 <!-- // Chanels Item -->
 

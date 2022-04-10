@@ -142,11 +142,6 @@ return [
         'slug' => 'نام یکتا',
         'url' => 'آدرس ویدیو',
         'thumbnail' => 'تصویر بندانگشتی',
-        'password' => [
-            'current_password' => 'رمز عبور کنونی',
-            'password' => 'رمز عبور',
-            'password_confirmation' => 'تایید رمز عبور'
-        ],
         'is_special_offer' => 'پیشنهاد ویژه',
         "user" => [
 
@@ -165,12 +160,12 @@ return [
             "mobile" => "تلفن همراه",
             "age" => "سن",
             "sex" => "جنسیت",
-            'national_code' => 'کد ملی'
+            'national_code' => 'کد ملی',
         ],
         "data" => [
-            "password" => 'رمز عبور'
+            "password" => 'رمز عبور',
         ],
-        'category_id' => 'دسته بندی'
+        'category_id' => 'دسته بندی',
     ],
     'national_code' => 'کد ملی صحیح نمیباشد',
 ];

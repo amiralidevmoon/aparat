@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration {
+return new class extends Migration{
     /**
      * Run the migrations.
      *
@@ -20,7 +20,8 @@ return new class extends Migration {
             $table->integer('length');
             $table->string('slug', 128)->unique();
             $table->text('description')->nullable();
-            $table->foreignId('category_id')->nullable()->constrained()->cascadeOnDelete();
+            $table->foreignId('category_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
             $table->text('thumbnail');
 
             $table->timestamps();

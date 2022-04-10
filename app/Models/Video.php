@@ -58,4 +58,16 @@ class Video extends Model
     {
         return $this->category?->getRandomVideos($count)->except($this->id);
     }
+
+    public function ownerName(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => $this->user?->name
+        );
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
