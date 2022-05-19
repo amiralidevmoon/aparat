@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\Likeable;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Hekmatinasser\Verta\Verta;
 use Illuminate\Database\Eloquent\Casts\Attribute;
@@ -10,9 +11,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Video extends Model
 {
-    use HasFactory, Sluggable;
+    use HasFactory, Sluggable, Likeable;
 
     protected $guarded = [];
+
+    protected $with = ['category', 'user'];
 
     public function category()
     {
@@ -69,5 +72,10 @@ class Video extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class)->orderBy('created_at', 'desc');
     }
 }

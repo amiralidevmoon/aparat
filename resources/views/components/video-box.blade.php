@@ -7,9 +7,19 @@
         </div>
         <div class="video-info">
             <a href="{{ route('videos.show', $video->slug) }}" class="title">{{ $video->title }}</a>
-            <a href="{{ route('videos.edit', $video->slug) }}">
+
+            <a class="ml-5 mr-5" href="{{ route('videos.edit', $video->slug) }}">
                 <i class="fa fa-pencil" aria-hidden="true"></i>
             </a>
+
+            <form action="{{ route('videos.destroy', $video->slug) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <div class="form-group">
+                    <input type="submit" class="fa fa-trash delete-user" value="Delete">
+                </div>
+            </form>
+
             <a class="channel-name" href="#">{{ $video->owner_name }}<span>
                                         <i class="fa fa-check-circle"></i></span>
             </a>

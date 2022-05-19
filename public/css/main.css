@@ -133,7 +133,7 @@ body{
 	line-height:24px;
 	font-weight:300;
 	font-family: 'IRANSansWeb', sans-serif;
-	background-color: #e6e6e6;
+	background-color: #fff;
 	height: 100%;
 	position: relative;
 	direction: rtl;
@@ -159,7 +159,7 @@ body{
 	clear: both;
 }
 header{
-	background-color: #444444;
+	background-color: #0E2338;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
@@ -692,7 +692,7 @@ header ul.account-menu li  .color-4{
 	color: #444444;
 }
 #main-category{
-	background-color: #FFF;
+	background-color: #2B3E50;
 	-webkit-box-shadow: -1px 2px 26px -6px rgba(0,0,0,0.37);
 	-moz-box-shadow: -1px 2px 26px -6px rgba(0,0,0,0.37);
 	box-shadow: -1px 2px 26px -6px rgba(0,0,0,0.37);
@@ -709,7 +709,7 @@ header ul.account-menu li  .color-4{
 }
 #main-category ul.main-category-menu li a{
 	font-family: 'IRANSansWeb', sans-serif;
-	color: #444444;
+	color: #fff;
 	font-weight: 700;
 	font-size: 12px;
 	display: block;
@@ -720,7 +720,7 @@ header ul.account-menu li  .color-4{
 }
 #main-category ul.main-category-menu li a .fa{
 	color: #ffffff;
-	background-color: #ff5e3a;
+	background-color: blue;
 	height: 35px;
 	width: 35px;
 	margin-left: 20px;
@@ -732,7 +732,7 @@ header ul.account-menu li  .color-4{
 	border-radius: 5px;
 	}
 #main-category ul.main-category-menu li.color-1 a .fa {
-	background-color: #ff5e3a;
+	background-color: #2e6da4;
 	}
 #main-category ul.main-category-menu li.color-2 a .fa {
 	background-color: #66c0c2;
@@ -931,6 +931,8 @@ h1.new-video-title .fa{
 .video-item{
 	margin-bottom: 15px;
 	margin-top: 15px;
+    border: 2px solid grey;
+    border-radius: 5px;
 }
 .video-item .thumb{
 	position: relative;
@@ -1646,6 +1648,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 #related-posts{
 	background-color: #FFF;
+    border: 1px solid black;
+    border-radius: 3px;
 	padding: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;

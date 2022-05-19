@@ -9,4 +9,5 @@ return [
     'your_email_was_verified' => 'ایمیل شما با موفقیت تایید شد.',
     'your_email_was_already_verified' => 'ایمیل شما قبلا تایید شده است!',
     'your_password_was_reset' => 'رمز عبور با موفقیت بازیابی شد.',
+    'comment_sent_successfully' => 'نظر شما با موفقیت ثبت شد.',
 ];

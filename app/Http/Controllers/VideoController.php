@@ -30,6 +30,8 @@ class VideoController extends Controller
 
     public function show(Video $video)
     {
+        $video->load('comments.user');
+
         return view('videos.show', compact('video'));
     }
 
@@ -47,8 +49,10 @@ class VideoController extends Controller
         return to_route('videos.show', $video->slug)->with('alert', __('messages.updated_successfully'));
     }
 
-    public function destroy($id)
+    public function destroy(Video $video)
     {
-        //
+        $video->delete();
+
+        return to_route('index')->with('alert', __('messages.success'));
     }
 }
