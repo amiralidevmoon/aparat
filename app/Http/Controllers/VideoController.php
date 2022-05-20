@@ -6,6 +6,7 @@ use App\Http\Requests\StoreVideoRequest;
 use App\Http\Requests\UpdateVideoRequest;
 use App\Models\Category;
 use App\Models\Video;
+use Illuminate\Support\Facades\Storage;
 
 class VideoController extends Controller
 {
@@ -23,6 +24,12 @@ class VideoController extends Controller
 
     public function store(StoreVideoRequest $request)
     {
+        $videoPath = Storage::putFile('', $request->file);
+
+        $request->merge([
+                            'url' => $videoPath,
+                        ]);
+
         $request->user()->videos()->create($request->all());
 
         return to_route('index')->with('alert', __('messages.success'));

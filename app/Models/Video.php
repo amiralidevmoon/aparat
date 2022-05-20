@@ -13,7 +13,9 @@ class Video extends Model
 {
     use HasFactory, Sluggable, Likeable;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'title', 'description', 'length', 'url', 'thumbnail', 'category_id',
+    ];
 
     protected $with = ['category', 'user'];
 
@@ -47,6 +49,13 @@ class Video extends Model
     {
         return Attribute::make(
             get: fn() => (new Verta($this->created_at))->formatDifference()
+        );
+    }
+
+    public function videoUrl(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => '/storage/'.$this->url
         );
     }
 

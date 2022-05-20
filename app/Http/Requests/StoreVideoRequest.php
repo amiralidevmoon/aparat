@@ -26,9 +26,16 @@ class StoreVideoRequest extends FormRequest
         return [
             'title' => ['required'],
             'length' => ['required', 'integer'],
-            'url' => ['required', 'url'],
+            'file' => ['required', 'file', 'mimetypes:video/avi,video/mpeg,video/quicktime', 'max:10240'], // 10 MB
             'thumbnail' => ['required', 'url'],
-            'category_id' => ['required', 'exists:categories,id']
+            'category_id' => ['required', 'exists:categories,id'],
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'file.*' => 'فایل باید ویدیویی باشد',
         ];
     }
 
