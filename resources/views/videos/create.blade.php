@@ -20,7 +20,7 @@
                                    placeholder="@lang('videos.length')">
                         </div>
                         <div class="col-md-6">
-                            <label>آدرس ویدیو</label>
+                            <label>ویدیو</label>
                             <input type="file" name="file" class="form-control">
                         </div>
                         <div class="col-md-6">

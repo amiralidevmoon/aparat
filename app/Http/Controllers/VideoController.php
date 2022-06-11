@@ -51,6 +51,13 @@ class VideoController extends Controller
 
     public function update(UpdateVideoRequest $request, Video $video)
     {
+        if ($request->hasFile('file')) {
+            $videoPath = Storage::putFile('', $request->file);
+
+            $request->merge([
+                                'url' => $videoPath,
+                            ]);
+        }
         $video->update($request->all());
 
         return to_route('videos.show', $video->slug)->with('alert', __('messages.updated_successfully'));
