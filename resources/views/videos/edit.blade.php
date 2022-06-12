@@ -16,11 +16,6 @@
                                    placeholder="@lang('videos.title')">
                         </div>
                         <div class="col-md-6">
-                            <label>@lang('videos.length')</label>
-                            <input type="text" name="length" class="form-control" value="{{ $video->length }}"
-                                   placeholder="@lang('videos.length')">
-                        </div>
-                        <div class="col-md-6">
                             <label>ویدیو</label>
                             <input type="file" name="file" class="form-control">
                         </div>
