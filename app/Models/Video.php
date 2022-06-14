@@ -59,6 +59,13 @@ class Video extends Model
         );
     }
 
+    public function videoThumbnail(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => '/storage/'.$this->thumbnail
+        );
+    }
+
     public function categoryName(): Attribute
     {
         return Attribute::make(
